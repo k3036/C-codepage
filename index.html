@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="Hfsan.css">
+</head>
+<body>
+    <div style="text-align: center">
+        <p></p>
+       <big><big><big><big> C#は基本的な関数のつくり方を学習致しました。</big></big></big></big>
+        <p></p>
+        <video width="500"height="500" src="348f3356-b700-4111-997b-91bea29ea883.mp4" loop autoplay muted></video>
+
+<pre>
+   <big><big><big> <code>
+       列挙型-enum、条件分岐-switch文、乱数-random、制御構造-if文、反復処理-IEnumerable.配列-string
+       
+        // See https://aka.ms/new-console-template for more information
+        public delegate void Abc(int x);
+        class Efg 
+        {
+            enum Aa 
+            {
+            A,
+            B,
+            C,
+            D
+            }
+            public void Box(int x) 
+            {
+                Aa a = Aa.B;
+                switch (a) 
+                {
+                    case Aa.A:
+                        Console.WriteLine("False");break;
+                    case Aa.B:
+                        Console.WriteLine("True");break;
+                    case Aa.C:
+                        Console.WriteLine("False");break;
+                    case Aa.D:
+                        Console.WriteLine("False");break;
+                    default:Console.WriteLine("False");break;
+                }
+            }
+            public void Low(int x) 
+            {
+                Random sun = new Random();
+                int aaa = sun.Next(1, 6);
+                Console.WriteLine(aaa);
+                if (aaa <= 6) 
+                {
+                    Console.WriteLine("VeryGood");
+                }
+                else if (aaa <= 3) 
+                {
+                    Console.WriteLine("Good");
+                }
+                else 
+                {
+                    Console.WriteLine("Bad");
+                }
+            }
+            public void Hi(int x) 
+            {
+            for( x = 1; x <= 10; ++x) 
+                {
+                    if (x == 9) 
+                    {
+                        break;
+                    }
+                    Console.WriteLine(x);
+                }
+            }
+            public void Kic(int x) 
+            {
+                bool sss = true;
+                Console.WriteLine(sss ? "Y" : "N");
+                Console.WriteLine(false ? "Y" : "N");
+            }
+            public void Ban(int x) 
+            {
+                IEnumerable<int> sox = new int[] { 10, 20, 30 };
+                IList<int> dax = sox as IList<int>;
+                if (dax != null) 
+                {
+                    Console.WriteLine(dax[0] + dax[dax.Count - 1]);
+                }
+            }
+            public void Tr(int x) 
+            {
+                byte ab = 5;
+                int bb = 100;
+                bb = ab;
+                Console.WriteLine(typeof(List<int>));
+                Console.WriteLine(typeof(List<decimal>));
+            }
+            public void Mx(int x) 
+            {
+                var xx = 3;
+                try 
+                {
+                    if (xx <= 0) 
+                    {
+                        Console.WriteLine("xx is <0");
+                    }
+                    Console.WriteLine("X is" + xx + "!");
+                }
+                catch(OverflowException cc) 
+                {
+                    Console.WriteLine(xx++);
+                }
+                finally 
+                {
+                    Console.WriteLine("Finishi");
+                }
+                
+            }
+            public void Fgf(int x) 
+            {
+                string[] max = new string[] { "A", "B", "C" };
+                foreach(string s in max) 
+                {
+                    Console.WriteLine(s);
+                }
+               
+            }
+             
+            
+                static void Main() 
+                {
+                    Efg efg = new Efg();
+                    Abc abc = delegate (int x) { };
+                    abc += efg.Box;
+                    abc += efg.Low;
+                    abc += efg.Hi;
+                    abc += efg.Kic;
+                    abc += efg.Ban;
+                    abc += efg.Tr;
+                    abc += efg.Fgf;
+                    abc += efg.Mx;
+                    abc += (int x) =>
+                      {
+                          Console.WriteLine("NEXT");
+                      };
+                    abc(555);
+                }
+            
+        
+        }
+        
+    </code>
+    </pre>
+</div></big></big>
+</body>
+</html>
